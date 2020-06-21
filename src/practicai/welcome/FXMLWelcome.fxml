@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="parentContainer" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practicai.welcome.FXMLWelcomeController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="anchorRoot" prefHeight="511.0" prefWidth="633.0" style="-fx-background-color: green; -fx-border-color: black; -fx-border-width: 5;">
+          <children>
+            <ImageView fitHeight="191.0" fitWidth="192.0" layoutX="241.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="241.0">
+               <image>
+                  <Image url="@../../img/ucalogo.jpg" />
+               </image>
+            </ImageView>
+              <Button fx:id="button" layoutX="196.0" layoutY="416.0" onAction="#loadDomainScreen" style="-fx-background-color: black;" text="Comencemos!" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Button>
+              <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+            <Label layoutX="182.0" layoutY="241.0" text="Desafío de programación." textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="284.0" prefHeight="30.0" prefWidth="542.0" text="Modelo de transferencia de calor modificado para Simular en 3D" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="130.0" layoutY="322.0" prefHeight="94.0" prefWidth="373.0" style="-fx-wrap-text: true; -fx-text-alignment: justify;" text="El presente desafío tiene como fín presentar el método de los elementos finitos aplicado a un modelo matemático para tres dimensiones. " textFill="#f2ebeb">
+               <font>
+                  <Font name="Times New Roman Italic" size="18.0" />
+               </font>
+            </Label>
+          </children>
+         <effect>
+            <Blend />
+         </effect>
+      </AnchorPane>
+   </children>
+</StackPane>
