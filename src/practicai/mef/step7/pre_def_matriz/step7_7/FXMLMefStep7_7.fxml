@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="container" prefHeight="511.0" prefWidth="633.0" styleClass="AnchorPane" stylesheets="@../../../../FrameStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practicai.mef.step7.pre_def_matriz.step7_7.FXMLMefStep7_7Controller">
+   <children>
+      <Button fx:id="button" layoutX="258.0" layoutY="452.0" mnemonicParsing="false" onAction="#loadStep7MatrixC" styleClass="Button" stylesheets="@../../../../FrameStyle.css" text="Siguiente" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="341.0" fitWidth="587.0" layoutX="41.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../img/MEF/Step7/Definiciones%20previas/Step7.7.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="52.0" layoutY="14.0" text="Resultados de derivadas parciales." textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="36.0" />
+         </font>
+      </Label>
+      <Separator layoutX="41.0" layoutY="53.0" prefHeight="14.0" prefWidth="560.0" />
+   </children>
+</AnchorPane>

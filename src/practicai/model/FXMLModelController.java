@@ -57,7 +57,7 @@ public class FXMLModelController implements Initializable {
       
       Timeline timeline = new Timeline();
       KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
-      KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
+      KeyFrame kf = new KeyFrame(Duration.seconds(0.1), kv);
       timeline.getKeyFrames().add(kf);
       timeline.setOnFinished(event1->{
           parentContainer.getChildren().remove(container);
