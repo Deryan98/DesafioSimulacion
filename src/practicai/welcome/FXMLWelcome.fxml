@@ -11,14 +11,14 @@
 
 <StackPane fx:id="parentContainer" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practicai.welcome.FXMLWelcomeController">
    <children>
-      <AnchorPane id="AnchorPane" fx:id="anchorRoot" prefHeight="511.0" prefWidth="633.0" style="-fx-background-color: green; -fx-border-color: black; -fx-border-width: 5;">
+      <AnchorPane id="AnchorPane" fx:id="anchorRoot" prefHeight="511.0" prefWidth="633.0" styleClass="AnchorPane" stylesheets="@../FrameStyle.css">
           <children>
             <ImageView fitHeight="191.0" fitWidth="192.0" layoutX="241.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="241.0">
                <image>
                   <Image url="@../../img/ucalogo.jpg" />
                </image>
             </ImageView>
-              <Button fx:id="button" layoutX="196.0" layoutY="416.0" onAction="#loadDomainScreen" style="-fx-background-color: black;" text="Comencemos!" textFill="#f8f8f8">
+              <Button fx:id="button" layoutX="196.0" layoutY="416.0" onAction="#loadDomainScreen" styleClass="Button" stylesheets="@../FrameStyle.css" text="Comencemos!" textFill="#f8f8f8">
                <font>
                   <Font name="System Bold" size="32.0" />
                </font>

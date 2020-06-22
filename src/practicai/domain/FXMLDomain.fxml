@@ -25,7 +25,7 @@
             <Image url="@../../img/Dominio.png" />
          </image>
       </ImageView>
-      <Button fx:id="button" layoutX="253.0" layoutY="433.0" mnemonicParsing="false" onAction="#loadMeshScreen" style="-fx-background-color: black;" text="Siguiente" textFill="WHITE">
+      <Button fx:id="button" layoutX="253.0" layoutY="433.0" mnemonicParsing="false" onAction="#loadCondContornoScreen" style="-fx-background-color: black;" text="Siguiente" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font></Button>

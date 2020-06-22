@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package practicai.domain;
+package practicai.cond_contorno;
 
 import java.io.IOException;
 import java.net.URL;
@@ -28,12 +28,12 @@ import javafx.util.Duration;
  *
  * @author didiercruz
  */
-public class FXMLDomainController implements Initializable {
+public class FXMLCondContornoController implements Initializable {
 
     @FXML
-    private Button button;
-    @FXML
     private AnchorPane container;
+    @FXML
+    private Button button;
 
     /**
      * Initializes the controller class.
@@ -43,13 +43,9 @@ public class FXMLDomainController implements Initializable {
         // TODO
     }    
 
-    private void loadMeshScreen(ActionEvent event) throws IOException {
-      
-    }
-
     @FXML
-    private void loadCondContornoScreen(ActionEvent event) throws IOException {
-      Parent root = FXMLLoader.load(getClass().getResource("/practicai/cond_contorno/FXMLCondContorno.fxml"));
+    private void loadMeshScreen(ActionEvent event) throws IOException {
+       Parent root = FXMLLoader.load(getClass().getResource("/practicai/mesh/FXMLMesh.fxml"));
       Scene scene = button.getScene();
       
       root.translateXProperty().set(scene.getWidth());

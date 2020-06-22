@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package practicai.domain;
+package practicai.mef.step1;
 
 import java.io.IOException;
 import java.net.URL;
@@ -28,12 +28,12 @@ import javafx.util.Duration;
  *
  * @author didiercruz
  */
-public class FXMLDomainController implements Initializable {
+public class FXMLMefStep1Controller implements Initializable {
 
     @FXML
-    private Button button;
-    @FXML
     private AnchorPane container;
+    @FXML
+    private Button button;
 
     /**
      * Initializes the controller class.
@@ -43,22 +43,18 @@ public class FXMLDomainController implements Initializable {
         // TODO
     }    
 
-    private void loadMeshScreen(ActionEvent event) throws IOException {
-      
-    }
-
     @FXML
-    private void loadCondContornoScreen(ActionEvent event) throws IOException {
-      Parent root = FXMLLoader.load(getClass().getResource("/practicai/cond_contorno/FXMLCondContorno.fxml"));
+    private void loadMefStep2Screen(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/practicai/mef/step2/FXMLMefStep2.fxml"));
       Scene scene = button.getScene();
       
-      root.translateXProperty().set(scene.getWidth());
+      root.translateYProperty().set(-scene.getWidth());
       
       StackPane parentContainer = (StackPane) scene.getRoot();
       parentContainer.getChildren().add(root);
       
       Timeline timeline = new Timeline();
-      KeyValue kv = new KeyValue(root.translateXProperty(), 0, Interpolator.EASE_IN);
+      KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
       KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
       timeline.getKeyFrames().add(kf);
       timeline.setOnFinished(event1->{
