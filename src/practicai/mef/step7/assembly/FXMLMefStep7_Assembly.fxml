@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="container" prefHeight="511.0" prefWidth="633.0" styleClass="AnchorPane" stylesheets="@../../../FrameStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practicai.mef.step7.assembly.FXMLMefStep7_AssemblyController">
+   <children>
+      <Button fx:id="button" layoutX="253.0" layoutY="466.0" mnemonicParsing="false" onAction="#loadStep8Screen" styleClass="Button" stylesheets="@../../../../FrameStyle.css" text="Siguiente" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Label layoutX="148.0" layoutY="14.0" text="Paso 7.15 Ensamblaje" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="36.0" />
+         </font>
+      </Label>
+      <Separator layoutX="17.0" layoutY="53.0" prefHeight="13.0" prefWidth="601.0" />
+      <ImageView fitHeight="301.0" fitWidth="446.0" layoutX="96.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>
