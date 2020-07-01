@@ -3,12 +3,13 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" fx:id="container" prefHeight="511.0" prefWidth="633.0" styleClass="AnchorPane" stylesheets="@../../FrameStyle.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="practicai.mef.step8.FXMLMefStep8Controller">
+<AnchorPane id="AnchorPane" fx:id="container" prefHeight="511.0" prefWidth="633.0" styleClass="AnchorPane" stylesheets="@../../FrameStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practicai.mef.step8.FXMLMefStep8Controller">
    <children>
       <Button fx:id="button" layoutX="253.0" layoutY="452.0" mnemonicParsing="false" onAction="#loadGoodByeScreen" styleClass="Button" stylesheets="@../../FrameStyle.css" text="Siguiente" textFill="WHITE">
          <font>
@@ -20,7 +21,109 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Separator layoutX="12.0" layoutY="43.0" prefHeight="16.0" prefWidth="609.0" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="217.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true" />
+      <Separator layoutX="12.0" layoutY="35.0" prefHeight="16.0" prefWidth="609.0" />
+      <AnchorPane layoutX="12.0" layoutY="51.0" prefHeight="45.0" prefWidth="609.0">
+         <children>
+            <Button fx:id="btn_aplicando_dirichlet" layoutX="52.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleActionButton" styleClass="btnMatrix" text="Aplicando Dirichlet" />
+            <Button fx:id="btn_matriz_k_global" layoutX="183.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleActionButton" styleClass="btnMatrix" text="Matriz K Global" />
+            <Button fx:id="btn_x_y_b_global" layoutX="296.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleActionButton" styleClass="btnMatrix" text="Matriz X y b global" />
+            <Button fx:id="btn_dirichlet_neumann" layoutX="425.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleActionButton" styleClass="btnMatrix" text="Dirichlet y Neumann" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="12.0" layoutY="107.0" prefHeight="343.0" prefWidth="609.0">
+         <children>
+            <Pane fx:id="pnl_matriz_k_global" prefHeight="343.0" prefWidth="609.0" styleClass="paneAssemble">
+               <children>
+                  <ImageView fitHeight="81.0" fitWidth="472.0" layoutX="69.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/MEF/Step8/Matrix%20C.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="52.0" fitWidth="593.0" layoutX="9.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/MEF/Step8/Matrix%20K.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="301.0" layoutX="154.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/MEF/Step8/Matrix%20L.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="148.0" fitWidth="587.0" layoutX="12.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/MEF/Step8/Matrix%20G.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_matriz_x_y_b" prefHeight="343.0" prefWidth="609.0" styleClass="paneAssemble">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="112.0" layoutX="152.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/MEF/Step8/A.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="199.0" fitWidth="122.0" layoutX="152.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/MEF/Step8/B.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="327.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/MEF/Step8/f.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="202.0" fitWidth="200.0" layoutX="327.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/MEF/Step8/g.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="281.0" layoutY="124.0" text="=" textFill="WHITE">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_dirichlet_neumann" prefHeight="343.0" prefWidth="609.0" styleClass="paneAssemble">
+               <children>
+                  <ImageView fitHeight="370.0" fitWidth="466.0" layoutX="14.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/MEF/Step8/Dirichlet2.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="259.0" fitWidth="97.0" layoutX="501.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/MEF/Step8/Neumann.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="16.0" prefHeight="60.0" prefWidth="577.0" text="La matriz de Dirichlet es el resultado de multiplicar los valores puntuales de cada fila por su valor de dirichlet. Además se le suma el vector de Neumann a los nodos correspondientes." textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_aplicando_dirichlet" prefHeight="343.0" prefWidth="609.0" styleClass="paneAssemble">
+               <children>
+                  <ImageView fitHeight="268.0" fitWidth="318.0" layoutX="98.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/MEF/Step8/Dirichlet1.1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="268.0" fitWidth="97.0" layoutX="413.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/MEF/Step8/Dirichlet1.2.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="11.0" prefHeight="75.0" prefWidth="587.0" text="Las condiciones de contorno se aplican a los nodos 3,4,5 y 8. Por lo que las filas correspondientes serán eliminadas, más las columnas correspondientes, no se eliminarán y se van a trabajar como valores conocidos." textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

@@ -19,7 +19,7 @@ public class PracticaI extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/practicai/mef/step7/def_matriz/step7_8_C1/FXMLMefStep7_8_C1.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/practicai/mef/step7/assembly/FXMLMefStep7_Assembly.fxml"));
         
         Scene scene = new Scene(root);
         

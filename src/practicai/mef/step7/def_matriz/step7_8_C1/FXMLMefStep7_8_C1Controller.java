@@ -50,12 +50,12 @@ public class FXMLMefStep7_8_C1Controller implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("/practicai/mef/step7/def_matriz/step7_9_C2/FXMLMefStep7_9_C2.fxml"));
       Scene scene = button.getScene();
       
-      root.translateYProperty().set(scene.getHeight());
+      root.translateXProperty().set(-scene.getHeight());
       parentContainer.getChildren().add(root);
       
       Timeline timeline = new Timeline();
-      KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
-      KeyFrame kf = new KeyFrame(Duration.seconds(0.1), kv);
+      KeyValue kv = new KeyValue(root.translateXProperty(), 0, Interpolator.EASE_IN);
+      KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
       timeline.getKeyFrames().add(kf);
       timeline.setOnFinished(event1->{
           parentContainer.getChildren().remove(anchorRoot);

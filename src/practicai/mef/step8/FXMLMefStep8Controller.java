@@ -20,6 +20,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
 
@@ -34,6 +35,22 @@ public class FXMLMefStep8Controller implements Initializable {
     private AnchorPane container;
     @FXML
     private Button button;
+    @FXML
+    private Button btn_aplicando_dirichlet;
+    @FXML
+    private Button btn_matriz_k_global;
+    @FXML
+    private Button btn_x_y_b_global;
+    @FXML
+    private Button btn_dirichlet_neumann;
+    @FXML
+    private Pane pnl_matriz_k_global;
+    @FXML
+    private Pane pnl_aplicando_dirichlet;
+    @FXML
+    private Pane pnl_matriz_x_y_b;
+    @FXML
+    private Pane pnl_dirichlet_neumann;
 
     /**
      * Initializes the controller class.
@@ -61,6 +78,18 @@ public class FXMLMefStep8Controller implements Initializable {
           parentContainer.getChildren().remove(container);
       });
       timeline.play();
+    }
+
+    @FXML
+    private void handleActionButton(ActionEvent event) {
+        if(event.getSource() == btn_aplicando_dirichlet)
+            pnl_aplicando_dirichlet.toFront();
+        else if(event.getSource() == btn_matriz_k_global)
+            pnl_matriz_k_global.toFront();
+        else if(event.getSource() == btn_x_y_b_global)
+            pnl_matriz_x_y_b.toFront();
+        else if(event.getSource() == btn_dirichlet_neumann)
+            pnl_dirichlet_neumann.toFront();
     }
     
 }

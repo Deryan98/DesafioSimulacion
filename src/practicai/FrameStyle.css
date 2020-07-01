@@ -9,11 +9,67 @@ and open the template in the editor.
 */
 
 .AnchorPane {
+    -fx-pref-width:633px;
+    -fx-pref-height:511px;
     -fx-background-color: green;
     -fx-border-color: black;
-    -fx-border-width: 5
+    -fx-border-width: 5;
+    
 }
 
 .Button {
     -fx-background-color: black;
+}
+
+.btnElement {
+    -fx-background-color: linear-gradient(gray, black);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}
+.btnElement:pressed {
+    -fx-background-color: linear-gradient(#ff5400, #be1d00);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}
+
+.btnMatrix {
+    -fx-pref-width:75spx;
+    -fx-pref-height:50px;
+    -fx-background-color: black;
+    -fx-background-radius: 30;
+    -fx-border-width: 2;
+    -fx-border-color: yellow;
+    -fx-border-radius: 30;
+    -fx-text-fill: greenyellow
+}
+
+.btnMatrix:pressed {
+    -fx-background-color: linear-gradient(yellow, black);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}
+
+.paneAssemble {
+    -fx-background-color: green;
+}
+
+.tituloh1 {
+    -fx-font-size: 36px;
+    -fx-text-fill: white
+}
+
+.tituloh2 {
+    -fx-font-size: 24px;
+    -fx-text-fill: white
+}
+
+.btnSiguiente {
+    -fx-font-size: 24px;
+    -fx-text-fill: white;
+    -fx-background-color:black;
+    -fx-pref-width:130px;
+    -fx-pref-height:40px;
 }
