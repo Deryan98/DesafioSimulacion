@@ -6,8 +6,8 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane id="AnchorPane" fx:id="container" prefHeight="511.0" prefWidth="633.0" styleClass="AnchorPane" stylesheets="@../../../../FrameStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practicai.mef.step7.def_matriz.step7_8_C1.FXMLMefStep7_8_C1Controller">
    <children>
@@ -16,16 +16,224 @@
             <Font size="24.0" />
          </font>
       </Button>
-      <ImageView fitHeight="398.0" fitWidth="523.0" layoutX="73.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../img/MEF/Step7/Definicion%20de%20matrices/Step7.8-C1.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="115.0" layoutY="14.0" text="Definiendo Matriz C Parte I" textFill="WHITE">
+      <Label layoutX="109.0" layoutY="14.0" text="Definiendo Componentes de Matrices." textFill="WHITE">
          <font>
-            <Font name="Times New Roman Bold" size="36.0" />
+            <Font name="Times New Roman Bold" size="26.0" />
          </font>
       </Label>
-      <Separator layoutX="19.0" layoutY="48.0" prefHeight="13.0" prefWidth="596.0" />
+      <Separator layoutX="20.0" layoutY="37.0" prefHeight="13.0" prefWidth="596.0" />
+      <AnchorPane layoutX="9.0" layoutY="50.0" prefHeight="410.0" prefWidth="16.0">
+         <children>
+            <Button fx:id="btnMatrixC" layoutX="12.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleActionButton" styleClass="btnMatrix" text="C">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnMatrixK" layoutX="12.0" layoutY="91.0" mnemonicParsing="false" onAction="#handleActionButton" styleClass="btnMatrix" text="K">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnMatrixf" layoutX="15.0" layoutY="147.0" mnemonicParsing="false" onAction="#handleActionButton" styleClass="btnMatrix" text="f">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnMatrixL" layoutX="14.0" layoutY="205.0" mnemonicParsing="false" onAction="#handleActionButton" styleClass="btnMatrix" text="L">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnMatrixG" layoutX="13.0" layoutY="262.0" mnemonicParsing="false" onAction="#handleActionButton" styleClass="btnMatrix" text="G">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnMatrixg" layoutX="14.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleActionButton" styleClass="btnMatrix" text="g">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Label layoutX="12.0" layoutY="3.0" prefHeight="22.0" prefWidth="53.0" text="Matriz" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Separator layoutX="1.0" layoutY="20.0" prefHeight="13.0" prefWidth="75.0" />
+         </children></AnchorPane>
+      <AnchorPane layoutX="85.0" layoutY="50.0" prefHeight="410.0" prefWidth="537.0">
+         <children>
+            <Pane fx:id="pnl_matrix_K" prefHeight="410.0" prefWidth="537.0" styleClass="paneAssemble">
+               <children>
+                  <Label prefHeight="179.0" prefWidth="531.0" text="Para resolver la matriz K, recordamos que Nabla por N transpuesta ya lo conocemos, al igual que Nabla por N. Así que la integral solamente afectará a la función (xy), solo que transcribiendola en términos isoparamétricos para poder resolver la intergal sobre el volumen." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="213.0" fitWidth="514.0" layoutX="12.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../img/MEF/Step7/Definicion%20de%20matrices/Step7.9-K.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_matrix_L" prefHeight="410.0" prefWidth="537.0" styleClass="paneAssemble">
+               <children>
+                  <ImageView fitHeight="205.0" fitWidth="495.0" layoutX="21.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../img/MEF/Step7/Definicion%20de%20matrices/Step7.11-L.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="3.0" layoutY="49.0" prefHeight="98.0" prefWidth="531.0" text="De la matriz L se conocen Nabla por N transpuesta y Nabla por N, por lo que la integral solamente afectará a la función y, y se procede a transformar todo a término de épsilom, etha, pshi" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_matrix_G" prefHeight="410.0" prefWidth="537.0" styleClass="paneAssemble">
+               <children>
+                  <ImageView fitHeight="291.0" fitWidth="445.0" layoutX="46.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../img/MEF/Step7/Definicion%20de%20matrices/Step7.12-G.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutY="62.0" prefHeight="98.0" prefWidth="531.0" text="La matriz G también necesita que se modifiquen sus pesos de galerkin, ya que solo está N transpuesta, pero ya lo calculamos resolviendo para la matriz C. Luego Nabla por N también lo habíamos calculado. Por último, La integral de volumen sobre X también se calculó. " textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_matrix_g" prefHeight="410.0" prefWidth="537.0" styleClass="paneAssemble">
+               <children>
+                  <Label layoutX="3.0" layoutY="40.0" prefHeight="98.0" prefWidth="531.0" text="La matriz g, se resuelve trivialmente. Por lo que solo es de resolver la integral sobre el volumen de N transpuesta, que de hecho la calulamos resolviendo la matriz f." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="228.0" fitWidth="445.0" layoutX="46.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../img/MEF/Step7/Definicion%20de%20matrices/Step7.13-g1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_matrix_f" prefHeight="410.0" prefWidth="537.0" styleClass="paneAssemble">
+               <children>
+                  <AnchorPane prefHeight="45.0" prefWidth="531.0">
+                     <children>
+                        <Button fx:id="PageBtn1" layoutX="216.0" layoutY="9.0" mnemonicParsing="false" onAction="#handleActionPage2" styleClass="btnElement" text="1" />
+                        <Button fx:id="PageBtn2" layoutX="253.0" layoutY="9.0" mnemonicParsing="false" onAction="#handleActionPage2" styleClass="btnElement" text="2" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="45.0" prefHeight="358.0" prefWidth="537.0">
+                     <children>
+                        <Pane fx:id="pnlPage2" prefHeight="358.0" prefWidth="537.0" styleClass="paneAssemble">
+                           <children>
+                              <Label prefHeight="116.0" prefWidth="531.0" text="Luego podemos apreciar que por propiedades de integrales se integra cada término de la matriz y se procede a calcular. El resultado es una matriz con factor común 1/24, quedando así coeficientes conocidos multiplicando a la matriz del Jacobiano conocida por un vector columna 4x1 de valores 1." textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="277.0" fitWidth="387.0" layoutX="75.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../img/MEF/Step7/Definicion%20de%20matrices/Step7.10-f1.2.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pnlPage1" prefHeight="358.0" prefWidth="537.0" styleClass="paneAssemble">
+                           <children>
+                              <ImageView fitHeight="269.0" fitWidth="514.0" layoutX="13.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../img/MEF/Step7/Definicion%20de%20matrices/Step7.10-f1.1.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="4.0" layoutY="14.0" prefHeight="116.0" prefWidth="531.0" text="La matriz f es trivial. Por lo que simplemente es integrar sus respectivas funciones de forma, a la vez que traducir los diferenciales del mundo real, al isoparamétrico." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_matrix_C" prefHeight="410.0" prefWidth="537.0" styleClass="paneAssemble">
+               <children>
+                  <AnchorPane prefHeight="50.0" prefWidth="537.0">
+                     <children>
+                        <Button fx:id="btnPage1" layoutX="192.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleActionPage" styleClass="btnElement" text="1" />
+                        <Button fx:id="btnPage2" layoutX="234.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleActionPage" styleClass="btnElement" text="2" />
+                        <Button fx:id="btnPage3" layoutX="277.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleActionPage" styleClass="btnElement" text="3" />
+                        <Button fx:id="btnPage4" layoutX="319.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleActionPage" styleClass="btnElement" text="4" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="50.0" prefHeight="358.0" prefWidth="537.0">
+                     <children>
+                        <Pane fx:id="pnl_page2" prefHeight="358.0" prefWidth="531.0" styleClass="paneAssemble">
+                           <children>
+                              <ImageView fitHeight="378.0" fitWidth="531.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../img/MEF/Step7/Definicion%20de%20matrices/Step7.8-C1.2.png" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="116.0" prefWidth="531.0" text="Recordemos que las funciones de forma están en términos Isoparamétricos, épsilon, etha, pshi. Por lo que cualquier varibale en términos de (x,y,z) debe convertirse a su equivalente para poder realizar la integral triple." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pnl_page4" prefHeight="358.0" prefWidth="537.0" styleClass="paneAssemble">
+                           <children>
+                              <ImageView fitHeight="223.0" fitWidth="439.0" layoutX="49.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../img/MEF/Step7/Definicion%20de%20matrices/Step7.8-C1.4.png" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="123.0" prefWidth="531.0" text="Luego de integrar resulta esa matriz con la notación resta utilizada en clase. Luego se puede sacar de la matriz factor común 1/120, y nombrar la matriz resultante como A'." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pnl_page3" prefHeight="358.0" prefWidth="537.0" styleClass="paneAssemble">
+                           <children>
+                              <ImageView fitHeight="223.0" fitWidth="430.0" layoutX="59.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../img/MEF/Step7/Definicion%20de%20matrices/Step7.8-C1.3.png" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="116.0" prefWidth="531.0" text="Luego utilizamos propiedades de integrales para poder integrar los términos de la matriz y así proceder con su integral." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pnl_page1" prefHeight="358.0" prefWidth="531.0" styleClass="paneAssemble">
+                           <children>
+                              <ImageView fitHeight="278.0" fitWidth="531.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../img/MEF/Step7/Definicion%20de%20matrices/Step7.8-C1.1.png" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="123.0" prefWidth="531.0" text="Hay que definir la matriz C resolviendo su integral. Luego a N transpuesta se le debe modificar los pesos de galerkin debido a que nos resulta una multiplicación de matrices al resolver la integral, que no tiene solución. Por lo que introducimos un vector fila de N transpuesta y procedemos a su manipulación." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

@@ -85,18 +85,23 @@
                   </AnchorPane>
                   <AnchorPane layoutX="80.0" layoutY="4.0" prefHeight="331.0" prefWidth="498.0">
                      <children>
-                        <Pane fx:id="pnl_matrixF" prefHeight="363.0" prefWidth="534.0" styleClass="paneAssemble">
+                        <Label prefHeight="124.0" prefWidth="520.0" text="De las matrices anteriores ocurre que tenemos funciones de forma lineales, siendo derivadas dos veces. Esta situación desemboca en una situación donde la integral da cero. La forma de esta integral se llama forma fuerte, pero por el caso se debe transformar la integral utilizando Integración por partes a su forma débil. Para tales efectos solamente las integrales D y F presentan este problema." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Pane fx:id="pnl_matrixF" layoutY="125.0" prefHeight="238.0" prefWidth="534.0" styleClass="paneAssemble">
                            <children>
-                              <ImageView fitHeight="219.0" fitWidth="478.0" layoutX="49.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="219.0" fitWidth="478.0" layoutX="49.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../../img/MEF/step6.2.png" />
                                  </image>
                               </ImageView>
                            </children>
                         </Pane>
-                        <Pane fx:id="pnl_matrixD" prefHeight="363.0" prefWidth="534.0" styleClass="paneAssemble">
+                        <Pane fx:id="pnl_matrixD" layoutY="125.0" prefHeight="238.0" prefWidth="534.0" styleClass="paneAssemble">
                            <children>
-                              <ImageView fitHeight="194.0" fitWidth="520.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="191.0" fitWidth="520.0" layoutX="7.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../../img/MEF/step6.1.png" />
                                  </image></ImageView>
