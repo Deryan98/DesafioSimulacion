@@ -20,6 +20,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
 
@@ -34,6 +35,38 @@ public class FXMLMefStep1Controller implements Initializable {
     private AnchorPane container;
     @FXML
     private Button button;
+    @FXML
+    private Pane pnl_step1;
+    @FXML
+    private Pane pnl_step2;
+    @FXML
+    private Pane pnl_step3;
+    @FXML
+    private Pane pnl_step4;
+    @FXML
+    private Button btn_step1;
+    @FXML
+    private Button btn_step2;
+    @FXML
+    private Button btn_step3;
+    @FXML
+    private Button btn_step4;
+    @FXML
+    private Pane pnl_step5;
+    @FXML
+    private Pane pnl_step6;
+    @FXML
+    private Pane pnl_matrixD;
+    @FXML
+    private Button btn_step5;
+    @FXML
+    private Button buttonD;
+    @FXML
+    private Button buttonF;
+    @FXML
+    private Button btn_step6;
+    @FXML
+    private Pane pnl_matrixF;
 
     /**
      * Initializes the controller class.
@@ -45,7 +78,7 @@ public class FXMLMefStep1Controller implements Initializable {
 
     @FXML
     private void loadMefStep2Screen(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/practicai/mef/step2/FXMLMefStep2.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/practicai/mef/step7/def_matriz/step7_8_C1/FXMLMefStep7_8_C1.fxml"));
       Scene scene = button.getScene();
       
       root.translateYProperty().set(-scene.getWidth());
@@ -61,6 +94,30 @@ public class FXMLMefStep1Controller implements Initializable {
           parentContainer.getChildren().remove(container);
       });
       timeline.play();
+    }
+
+    @FXML
+    private void handleActionButton(ActionEvent event) {
+        if(event.getSource() == btn_step1)
+            pnl_step1.toFront();
+        else if(event.getSource() == btn_step2)
+            pnl_step2.toFront();
+        else if(event.getSource() == btn_step3)
+            pnl_step3.toFront();
+        else if(event.getSource() == btn_step4)
+            pnl_step4.toFront();
+        else if(event.getSource() == btn_step5)
+            pnl_step5.toFront();
+        else if(event.getSource() == btn_step6)
+            pnl_step6.toFront();
+    }
+
+    @FXML
+    private void handleActionButton2(ActionEvent event) {
+        if(event.getSource() == buttonD)
+            pnl_matrixD.toFront();
+        else if(event.getSource() == buttonF)
+            pnl_matrixF.toFront();
     }
     
 }

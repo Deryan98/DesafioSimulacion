@@ -35,7 +35,7 @@ and open the template in the editor.
 }
 
 .btnMatrix {
-    -fx-pref-width:75spx;
+    -fx-pref-width:100spx;
     -fx-pref-height:50px;
     -fx-background-color: black;
     -fx-background-radius: 30;

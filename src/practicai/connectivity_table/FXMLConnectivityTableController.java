@@ -20,6 +20,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
 
@@ -34,6 +35,14 @@ public class FXMLConnectivityTableController implements Initializable {
     private Button button;
     @FXML
     private AnchorPane container;
+    @FXML
+    private Button btn_elements1to3;
+    @FXML
+    private Button btn_elements4to6;
+    @FXML
+    private Pane pnl_elements4to6;
+    @FXML
+    private Pane pnl_elements_1to3;
 
     /**
      * Initializes the controller class.
@@ -61,6 +70,14 @@ public class FXMLConnectivityTableController implements Initializable {
           parentContainer.getChildren().remove(container);
       });
       timeline.play();
+    }
+
+    @FXML
+    private void handleActionButton(ActionEvent event) {
+        if(event.getSource() == btn_elements1to3)
+            pnl_elements_1to3.toFront();
+        else if(event.getSource() == btn_elements4to6)
+            pnl_elements4to6.toFront();
     }
     
 }

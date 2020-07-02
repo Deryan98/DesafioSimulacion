@@ -21,6 +21,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 /**
@@ -44,23 +45,8 @@ public class FXMLGoodByeController implements Initializable {
     }    
 
     @FXML
-    private void loadPruebaScreen(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/practicai/pruebas/FXMLPruebas.fxml"));
-      Scene scene = button.getScene();
-      
-      root.translateYProperty().set(-scene.getWidth());
-      
-      StackPane parentContainer = (StackPane) scene.getRoot();
-      parentContainer.getChildren().add(root);
-      
-      Timeline timeline = new Timeline();
-      KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
-      KeyFrame kf = new KeyFrame(Duration.seconds(0.1), kv);
-      timeline.getKeyFrames().add(kf);
-      timeline.setOnFinished(event1->{
-          parentContainer.getChildren().remove(container);
-      });
-      timeline.play();
+    private void stop(ActionEvent event) {
+        ((Stage)button.getScene().getWindow()).close();
     }
     
 }

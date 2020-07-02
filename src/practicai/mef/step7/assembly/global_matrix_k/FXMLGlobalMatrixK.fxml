@@ -7,6 +7,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" fx:id="container" prefHeight="400.0" prefWidth="600.0" styleClass="AnchorPane" stylesheets="@../../../../FrameStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practicai.mef.step7.assembly.global_matrix_k.FXMLGlobalMatrixKController">
    <children>
@@ -20,67 +21,72 @@
             <Button fx:id="btn_matrix_b" layoutX="488.0" layoutY="11.0" mnemonicParsing="false" onAction="#hanbleActionButton" styleClass="btnMatrix" text="Matrix b" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="14.0" layoutY="128.0" prefHeight="369.0" prefWidth="604.0">
+      <AnchorPane layoutX="14.0" layoutY="135.0" prefHeight="369.0" prefWidth="604.0">
          <children>
-            <Pane fx:id="pnl_matrix_K" prefHeight="316.0" prefWidth="604.0" styleClass="paneAssemble">
+            <Button fx:id="button" layoutX="248.0" layoutY="317.0" mnemonicParsing="false" onAction="#loadStep8Screen" styleClass="btnSiguiente" text="Siguiente" />
+            <Pane fx:id="pnl_matrix_K" layoutY="99.0" prefHeight="217.0" prefWidth="604.0" styleClass="paneAssemble">
                <children>
-                  <ImageView fitHeight="126.0" fitWidth="584.0" layoutX="10.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="126.0" fitWidth="584.0" layoutX="10.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../img/MEF/Assembly/Global%20K/MatrixK.png" />
                      </image>
                   </ImageView>
                </children>
             </Pane>
-            <Pane fx:id="pnl_matrix_L" prefHeight="316.0" prefWidth="604.0" styleClass="paneAssemble">
+            <Pane fx:id="pnl_matrix_L" layoutY="99.0" prefHeight="217.0" prefWidth="604.0" styleClass="paneAssemble">
                <children>
-                  <ImageView fitHeight="126.0" fitWidth="584.0" layoutX="10.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="126.0" fitWidth="584.0" layoutX="10.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../img/MEF/Assembly/Global%20K/MatrixL.png" />
                      </image>
                   </ImageView>
                </children>
             </Pane>
-            <Pane fx:id="pnl_matrix_G" prefHeight="316.0" prefWidth="604.0" styleClass="paneAssemble">
+            <Pane fx:id="pnl_matrix_G" layoutY="99.0" prefHeight="217.0" prefWidth="604.0" styleClass="paneAssemble">
                <children>
-                  <ImageView fitHeight="120.0" fitWidth="584.0" layoutX="10.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="120.0" fitWidth="584.0" layoutX="10.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../img/MEF/Assembly/Global%20K/MatrixG.png" />
                      </image>
                   </ImageView>
                </children>
             </Pane>
-            <Pane fx:id="pnl_matrix_X" prefHeight="316.0" prefWidth="604.0" styleClass="paneAssemble">
+            <Pane fx:id="pnl_matrix_X" layoutY="99.0" prefHeight="217.0" prefWidth="604.0" styleClass="paneAssemble">
                <children>
-                  <ImageView fitHeight="202.0" fitWidth="175.0" layoutX="101.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="202.0" fitWidth="175.0" layoutX="98.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../img/MEF/Assembly/Global%20K/A.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="199.0" fitWidth="175.0" layoutX="324.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="199.0" fitWidth="175.0" layoutX="327.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../img/MEF/Assembly/Global%20K/B.png" />
                      </image>
                   </ImageView>
                </children>
             </Pane>
-            <Pane fx:id="pnl_matrix_b" prefHeight="316.0" prefWidth="604.0" styleClass="paneAssemble">
+            <Pane fx:id="pnl_matrix_b" layoutY="99.0" prefHeight="217.0" prefWidth="604.0" styleClass="paneAssemble">
                <children>
-                  <ImageView fitHeight="199.0" fitWidth="216.0" layoutX="65.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="199.0" fitWidth="216.0" layoutX="65.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../img/MEF/Assembly/Global%20K/f.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="199.0" fitWidth="216.0" layoutX="324.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="199.0" fitWidth="216.0" layoutX="324.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../img/MEF/Assembly/Global%20K/g.png" />
                      </image>
                   </ImageView>
                </children>
             </Pane>
-            <Button fx:id="button" layoutX="248.0" layoutY="317.0" mnemonicParsing="false" onAction="#loadStep8Screen" styleClass="btnSiguiente" text="Siguiente" />
-            <Pane fx:id="pnl_matrix_C" prefHeight="316.0" prefWidth="604.0" styleClass="paneAssemble">
+            <Label prefHeight="98.0" prefWidth="604.0" text="El ensamblaje de la matriz global K so compone de las submatrices (C,K,L,G) siendo cada una de dimensiones 8x8. Luego todas se unen formando una matriz cuadrada de 16x16. Además tenemos el sistema de incógnitas X, con las incógnitas A y B. Por último tenemos toda una ecuación igualada a unas gravedades f y g con valores conocidos." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Pane fx:id="pnl_matrix_C" layoutY="99.0" prefHeight="217.0" prefWidth="604.0" styleClass="paneAssemble">
                <children>
-                  <ImageView fitHeight="151.0" fitWidth="584.0" layoutX="10.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="151.0" fitWidth="584.0" layoutX="10.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../img/MEF/Assembly/Global%20K/MatrixC.png" />
                      </image>

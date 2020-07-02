@@ -33,9 +33,7 @@ public class FXMLMefStep7_8_C1Controller implements Initializable {
     @FXML
     private Button button;
     @FXML
-    private StackPane parentContainer;
-    @FXML
-    private AnchorPane anchorRoot;
+    private AnchorPane container;
 
     /**
      * Initializes the controller class.
@@ -47,6 +45,7 @@ public class FXMLMefStep7_8_C1Controller implements Initializable {
 
     @FXML
     private void loadStep7_9_C2(ActionEvent event) throws IOException {
+        /*
         Parent root = FXMLLoader.load(getClass().getResource("/practicai/mef/step7/def_matriz/step7_9_C2/FXMLMefStep7_9_C2.fxml"));
       Scene scene = button.getScene();
       
@@ -61,6 +60,25 @@ public class FXMLMefStep7_8_C1Controller implements Initializable {
           parentContainer.getChildren().remove(anchorRoot);
       });
       timeline.play();
+      */
+        
+        Parent root = FXMLLoader.load(getClass().getResource("/practicai/mef/step7/def_matriz/step7_9_C2/FXMLMefStep7_9_C2.fxml"));
+      Scene scene = button.getScene();
+      
+      root.translateYProperty().set(-scene.getWidth());
+      
+      StackPane parentContainer = (StackPane) scene.getRoot();
+      parentContainer.getChildren().add(root);
+      
+      Timeline timeline = new Timeline();
+      KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
+      KeyFrame kf = new KeyFrame(Duration.seconds(0.1), kv);
+      timeline.getKeyFrames().add(kf);
+      timeline.setOnFinished(event1->{
+          parentContainer.getChildren().remove(container);
+      });
+      timeline.play();
+
     }
     
 }

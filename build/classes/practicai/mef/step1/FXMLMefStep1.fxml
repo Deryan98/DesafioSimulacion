@@ -6,6 +6,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" fx:id="container" prefHeight="511.0" prefWidth="633.0" styleClass="AnchorPane" stylesheets="@../../FrameStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practicai.mef.step1.FXMLMefStep1Controller">
@@ -15,16 +16,150 @@
             <Font size="24.0" />
          </font>
       </Button>
-      <Label layoutX="204.0" layoutY="20.0" text="MEF paso 1 y 2" textFill="WHITE">
+      <Label layoutX="114.0" layoutY="20.0" text="MEF PASOS:" textFill="WHITE">
          <font>
             <Font size="32.0" />
          </font>
       </Label>
-      <Separator layoutX="14.0" layoutY="59.0" prefHeight="15.0" prefWidth="593.0" />
-      <ImageView fitHeight="361.0" fitWidth="419.0" layoutX="106.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../img/MEF/step1&amp;2.png" />
-         </image>
-      </ImageView>
+      <Separator layoutX="14.0" layoutY="59.0" prefHeight="15.0" prefWidth="603.0" />
+      <AnchorPane layoutX="14.0" layoutY="74.0" prefHeight="372.0" prefWidth="603.0">
+         <children>
+            <Pane fx:id="pnl_step2" prefHeight="372.0" prefWidth="603.0" styleClass="paneAssemble">
+               <children>
+                  <ImageView fitHeight="231.0" fitWidth="346.0" layoutX="129.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/MEF/step2.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="108.0" prefWidth="574.0" text="En el paso dos transformamos las funciones de forma, en su notación matricial, y tenemos un vector fila de funciones de forma, multiplicando a un vector Columna con las incógnitas tanto para A como B." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_step3" prefHeight="372.0" prefWidth="603.0" styleClass="paneAssemble">
+               <children>
+                  <ImageView fitHeight="219.0" fitWidth="421.0" layoutX="93.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/MEF/step3.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="132.0" prefWidth="574.0" text="Ahora se procede a sustituir las funciones de forma en las ecuaciones del modelo matemático. Al hacer esto, ya no son más ecuaciones, son aproximaciones. y cada aproximación se puede obtener aproximando a cero despejando y esos ceros se convertiran en Residuales si queremos estrictamente que se sustituya la aproximación por ecuación." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_step4" prefHeight="372.0" prefWidth="603.0" styleClass="paneAssemble">
+               <children>
+                  <ImageView fitHeight="282.0" fitWidth="593.0" layoutX="14.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/MEF/step4.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="65.0" prefWidth="574.0" text="Ambos residuales tienen un mismo peso W, por lo que en la fórmula solo se sustituye los Residuales por sus ecuaciones respectivas." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_step5" prefHeight="370.0" prefWidth="603.0" styleClass="paneAssemble">
+               <children>
+                  <ImageView fitHeight="363.0" fitWidth="574.0" layoutX="20.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/MEF/step5.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_step6" prefHeight="370.0" prefWidth="603.0" styleClass="paneAssemble">
+               <children>
+                  <AnchorPane layoutY="4.0" prefHeight="363.0" prefWidth="61.0">
+                     <children>
+                        <Button fx:id="buttonD" layoutX="5.0" mnemonicParsing="false" onAction="#handleActionButton2" prefWidth="51.0" styleClass="btnMatrix" text="D" />
+                        <Button fx:id="buttonF" layoutX="5.0" layoutY="60.0" mnemonicParsing="false" onAction="#handleActionButton2" prefHeight="45.0" prefWidth="51.0" styleClass="btnMatrix" text="F" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="80.0" layoutY="4.0" prefHeight="331.0" prefWidth="498.0">
+                     <children>
+                        <Pane fx:id="pnl_matrixF" prefHeight="363.0" prefWidth="534.0" styleClass="paneAssemble">
+                           <children>
+                              <ImageView fitHeight="219.0" fitWidth="478.0" layoutX="49.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/MEF/step6.2.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pnl_matrixD" prefHeight="363.0" prefWidth="534.0" styleClass="paneAssemble">
+                           <children>
+                              <ImageView fitHeight="194.0" fitWidth="520.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/MEF/step6.1.png" />
+                                 </image></ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_step1" prefHeight="372.0" prefWidth="603.0" styleClass="paneAssemble">
+               <children>
+                  <ImageView fitHeight="233.0" fitWidth="325.0" layoutX="14.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/MEF/step1.1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="231.0" fitWidth="209.0" layoutX="381.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/MEF/step1.2.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="16.0" layoutY="10.0" prefHeight="100.0" prefWidth="574.0" text="Las funciones de forma en este paso, al representar un elemento de la malla, caemos en cuenta que no existen tales funciones en el mundo real (x,y,z). Por lo que nos trasladamos al plano Isoparamétrico donde existe un tetraedro ideal, tal que las funciones de forma se cumplen para todos los elementos de la malla." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="309.0" layoutY="22.0" prefHeight="35.0" prefWidth="304.0">
+         <children>
+            <Button fx:id="btn_step1" mnemonicParsing="false" onAction="#handleActionButton" styleClass="btnElement" text="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_step2" layoutX="45.0" mnemonicParsing="false" onAction="#handleActionButton" styleClass="btnElement" text="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_step3" layoutX="90.0" mnemonicParsing="false" onAction="#handleActionButton" styleClass="btnElement" text="3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_step4" layoutX="138.0" mnemonicParsing="false" onAction="#handleActionButton" styleClass="btnElement" text="4">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_step5" layoutX="181.0" mnemonicParsing="false" onAction="#handleActionButton" styleClass="btnElement" text="5">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_step6" layoutX="223.0" mnemonicParsing="false" onAction="#handleActionButton" styleClass="btnElement" text="6">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

@@ -34,7 +34,7 @@
          <children>
             <Pane fx:id="pnl_matriz_k_global" prefHeight="343.0" prefWidth="609.0" styleClass="paneAssemble">
                <children>
-                  <ImageView fitHeight="81.0" fitWidth="472.0" layoutX="69.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="50.0" fitWidth="277.0" layoutX="9.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../img/MEF/Step8/Matrix%20C.png" />
                      </image>
@@ -44,7 +44,7 @@
                         <Image url="@../../../img/MEF/Step8/Matrix%20K.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="100.0" fitWidth="301.0" layoutX="154.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="100.0" fitWidth="301.0" layoutX="298.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../img/MEF/Step8/Matrix%20L.png" />
                      </image>
@@ -54,71 +54,86 @@
                         <Image url="@../../../img/MEF/Step8/Matrix%20G.png" />
                      </image>
                   </ImageView>
+                  <Label prefHeight="81.0" prefWidth="609.0" text="La matriz K global se ve reducida por las columnas y filas que se debe retirar. Así que se dejan las respectivas numeraciones de la tabla de conectividades, para no perder la lógica del ensamblaje, y nos quedan las matrices así:" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
                </children>
             </Pane>
             <Pane fx:id="pnl_matriz_x_y_b" prefHeight="343.0" prefWidth="609.0" styleClass="paneAssemble">
                <children>
-                  <ImageView fitHeight="100.0" fitWidth="112.0" layoutX="152.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="81.0" fitWidth="86.0" layoutX="180.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../img/MEF/Step8/A.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="199.0" fitWidth="122.0" layoutX="152.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="152.0" fitWidth="93.0" layoutX="180.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../img/MEF/Step8/B.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="327.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="75.0" fitWidth="153.0" layoutX="328.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../img/MEF/Step8/f.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="202.0" fitWidth="200.0" layoutX="327.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="164.0" fitWidth="153.0" layoutX="327.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../img/MEF/Step8/g.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="281.0" layoutY="124.0" text="=" textFill="WHITE">
+                  <Label layoutX="281.0" layoutY="176.0" text="=" textFill="WHITE">
                      <font>
                         <Font size="48.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="81.0" prefWidth="609.0" text="La matriz de incógnitas para A se ve reducida debido a que a ella se le aplicó dirichlet, y por tanto B no ha perdido ningún nodo. Luego aplica lo mismo para la matriz f y g que componen la matriz global b." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
                      </font>
                   </Label>
                </children>
             </Pane>
             <Pane fx:id="pnl_dirichlet_neumann" prefHeight="343.0" prefWidth="609.0" styleClass="paneAssemble">
                <children>
-                  <ImageView fitHeight="370.0" fitWidth="466.0" layoutX="14.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="251.0" fitWidth="456.0" layoutX="14.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../img/MEF/Step8/Dirichlet2.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="259.0" fitWidth="97.0" layoutX="501.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="251.0" fitWidth="86.0" layoutX="503.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../img/MEF/Step8/Neumann.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="16.0" prefHeight="60.0" prefWidth="577.0" text="La matriz de Dirichlet es el resultado de multiplicar los valores puntuales de cada fila por su valor de dirichlet. Además se le suma el vector de Neumann a los nodos correspondientes." textFill="WHITE" wrapText="true">
+                  <Label layoutX="16.0" prefHeight="60.0" prefWidth="577.0" text="La matriz de dirichlet es el resto de valores de las columnas en los nodos  (3,4,5,8), multiplicados por el valor 30 de dirichlet. Además se le suma la condición de Neumann a los nodos ya definidos previamente." textFill="WHITE" wrapText="true">
                      <font>
-                        <Font size="14.0" />
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="474.0" layoutY="172.0" text="+" textFill="WHITE">
+                     <font>
+                        <Font size="36.0" />
                      </font>
                   </Label>
                </children>
             </Pane>
             <Pane fx:id="pnl_aplicando_dirichlet" prefHeight="343.0" prefWidth="609.0" styleClass="paneAssemble">
                <children>
-                  <ImageView fitHeight="268.0" fitWidth="318.0" layoutX="98.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="259.0" fitWidth="315.0" layoutX="98.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../img/MEF/Step8/Dirichlet1.1.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="268.0" fitWidth="97.0" layoutX="413.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="259.0" fitWidth="97.0" layoutX="403.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../img/MEF/Step8/Dirichlet1.2.png" />
                      </image>
                   </ImageView>
-                  <Label alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="11.0" prefHeight="75.0" prefWidth="587.0" text="Las condiciones de contorno se aplican a los nodos 3,4,5 y 8. Por lo que las filas correspondientes serán eliminadas, más las columnas correspondientes, no se eliminarán y se van a trabajar como valores conocidos." textFill="WHITE" wrapText="true">
+                  <Label alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="11.0" prefHeight="75.0" prefWidth="587.0" text="La condición de dirichlet se aplica a los nodos 3,4,5 y 8. Por lo que las filas correspondientes serán eliminadas; mas las columnas correspondientes, NO se eliminarán y se van a trabajar como valores conocidos." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                      <font>
-                        <Font size="14.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
                </children>

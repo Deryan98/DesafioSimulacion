@@ -42,10 +42,6 @@ public class FXMLMefStep7_AssemblyController implements Initializable {
     @FXML
     private Pane pnl_element2;
     @FXML
-    private StackPane parentContainer;
-    @FXML
-    private AnchorPane anchorRoot;
-    @FXML
     private Button btnElement3;
     @FXML
     private Button btnElement4;
@@ -61,6 +57,8 @@ public class FXMLMefStep7_AssemblyController implements Initializable {
     private Pane pnl_element5;
     @FXML
     private Pane pnl_element6;
+    @FXML
+    private AnchorPane container;
 
     /**
      * Initializes the controller class.
@@ -72,7 +70,7 @@ public class FXMLMefStep7_AssemblyController implements Initializable {
     
     @FXML
     private void loadStep8Screen(ActionEvent event) throws IOException {
-        /*
+        
         Parent root = FXMLLoader.load(getClass().getResource("/practicai/mef/step8/FXMLMefStep8.fxml"));
       Scene scene = button.getScene();
       
@@ -89,8 +87,8 @@ public class FXMLMefStep7_AssemblyController implements Initializable {
           parentContainer.getChildren().remove(container);
       });
       timeline.play();
-      */
       
+      /*
       Parent root = FXMLLoader.load(getClass().getResource("/practicai/mef/step7/assembly/global_matrix_k/FXMLGlobalMatrixK.fxml"));
       Scene scene = button.getScene();
       
@@ -105,6 +103,7 @@ public class FXMLMefStep7_AssemblyController implements Initializable {
           parentContainer.getChildren().remove(anchorRoot);
       });
       timeline.play();
+*/
     }
 
     @FXML

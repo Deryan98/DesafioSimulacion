@@ -21,14 +21,24 @@
          </font>
       </Label>
       <Separator layoutX="19.0" layoutY="54.0" prefHeight="16.0" prefWidth="602.0" />
-      <ImageView fitHeight="287.0" fitWidth="358.0" layoutX="154.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="287.0" fitWidth="358.0" layoutX="82.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../img/CondContorno.png" />
          </image>
       </ImageView>
-      <Label layoutX="18.0" layoutY="80.0" prefHeight="67.0" prefWidth="613.0" style="-fx-wrap-text: true; -fx-text-alignment: justify;" text="Se le aplicó las siguientes condiciones de Dirichlet y Neumann a dos caras del cubo, seleccionando sus respectivos nodos." textFill="WHITE">
+      <Label layoutX="44.0" layoutY="81.0" prefHeight="67.0" prefWidth="561.0" style="-fx-wrap-text: true; -fx-text-alignment: justify;" text="Se le aplicó Dirichlet a los nodos (3,4,5,8), y Neumann a los nodos (2,1,6,7), siendo cada grupo de nodos la representación de la cara o superficie del cubo" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
          <font>
             <Font name="Times New Roman Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="454.0" layoutY="244.0" text="Dirichlet: A = 30" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="422.0" layoutY="302.0" text="Neumann: B = 20 dB/dn " textFill="WHITE">
+         <font>
+            <Font size="18.0" />
          </font>
       </Label>
    </children>

@@ -7,91 +7,94 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane fx:id="parentContainer" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practicai.mef.step7.assembly.FXMLMefStep7_AssemblyController">
+
+<AnchorPane id="AnchorPane" fx:id="container" prefHeight="511.0" prefWidth="633.0" styleClass="AnchorPane" stylesheets="@../../../FrameStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practicai.mef.step7.assembly.FXMLMefStep7_AssemblyController">
    <children>
-      <AnchorPane id="AnchorPane" fx:id="anchorRoot" prefHeight="511.0" prefWidth="633.0" styleClass="AnchorPane" stylesheets="@../../../FrameStyle.css">
+      <Button fx:id="button" layoutX="256.0" layoutY="467.0" mnemonicParsing="false" onAction="#loadStep8Screen" styleClass="Button" stylesheets="@../../../../FrameStyle.css" text="Siguiente" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Label layoutX="148.0" layoutY="14.0" text="Paso 7.15 Ensamblaje" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="36.0" />
+         </font>
+      </Label>
+      <Separator layoutX="16.0" layoutY="48.0" prefHeight="13.0" prefWidth="601.0" />
+      <AnchorPane layoutX="7.0" layoutY="87.0" prefHeight="402.0" prefWidth="115.0">
          <children>
-            <Button fx:id="button" layoutX="253.0" layoutY="466.0" mnemonicParsing="false" onAction="#loadStep8Screen" styleClass="Button" stylesheets="@../../../../FrameStyle.css" text="Siguiente" textFill="WHITE">
+            <Button fx:id="btnElement1" mnemonicParsing="false" onAction="#handleActionButton" prefHeight="57.0" prefWidth="115.0" styleClass="btnElement" stylesheets="@../../../FrameStyle.css" text="Elemento 1" />
+            <Button fx:id="btnElement2" layoutY="63.0" mnemonicParsing="false" onAction="#handleActionButton" prefHeight="57.0" prefWidth="115.0" styleClass="btnElement" stylesheets="@../../../FrameStyle.css" text="Elemento 2" />
+            <Button fx:id="btnElement3" layoutY="126.0" mnemonicParsing="false" onAction="#handleActionButton" prefHeight="57.0" prefWidth="115.0" styleClass="btnElement" stylesheets="@../../../FrameStyle.css" text="Elemento 3" />
+            <Button fx:id="btnElement4" layoutY="190.0" mnemonicParsing="false" onAction="#handleActionButton" prefHeight="57.0" prefWidth="115.0" styleClass="btnElement" stylesheets="@../../../FrameStyle.css" text="Elemento 4" />
+            <Button fx:id="btnElement5" layoutY="253.0" mnemonicParsing="false" onAction="#handleActionButton" prefHeight="57.0" prefWidth="115.0" styleClass="btnElement" stylesheets="@../../../FrameStyle.css" text="Elemento 5" />
+            <Button fx:id="btnElement6" layoutY="316.0" mnemonicParsing="false" onAction="#handleActionButton" prefHeight="57.0" prefWidth="115.0" styleClass="btnElement" stylesheets="@../../../FrameStyle.css" text="Elemento 6" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="122.0" layoutY="75.0" prefHeight="402.0" prefWidth="507.0">
+         <children>
+            <Label layoutX="20.0" prefHeight="157.0" prefWidth="461.0" text="Los siguientes son los elementos locales del cubo, que van a formar parte del ensamblaje en la matriz global. Si recuerdas se presentó anteriormente una tabla de conectividades relacionada a cada elemento. Por lo que ahora podrás apreciar como se relacionan dichas conectividades con los elementos locales." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                <font>
-                  <Font size="24.0" />
-               </font>
-            </Button>
-            <Label layoutX="148.0" layoutY="14.0" text="Paso 7.15 Ensamblaje" textFill="WHITE">
-               <font>
-                  <Font name="Times New Roman Bold" size="36.0" />
+                  <Font size="18.0" />
                </font>
             </Label>
-            <Separator layoutX="16.0" layoutY="48.0" prefHeight="13.0" prefWidth="601.0" />
-            <AnchorPane layoutX="7.0" layoutY="87.0" prefHeight="402.0" prefWidth="115.0">
+            <Pane fx:id="pnl_element6" layoutY="153.0" prefHeight="236.0" prefWidth="501.0" style="-fx-background-color: green;">
                <children>
-                  <Button fx:id="btnElement1" mnemonicParsing="false" onAction="#handleActionButton" prefHeight="57.0" prefWidth="115.0" styleClass="btnElement" stylesheets="@../../../FrameStyle.css" text="Elemento 1" />
-                  <Button fx:id="btnElement2" layoutY="63.0" mnemonicParsing="false" onAction="#handleActionButton" prefHeight="57.0" prefWidth="115.0" styleClass="btnElement" stylesheets="@../../../FrameStyle.css" text="Elemento 2" />
-                  <Button fx:id="btnElement3" layoutY="126.0" mnemonicParsing="false" onAction="#handleActionButton" prefHeight="57.0" prefWidth="115.0" styleClass="btnElement" stylesheets="@../../../FrameStyle.css" text="Elemento 3" />
-                  <Button fx:id="btnElement4" layoutY="190.0" mnemonicParsing="false" onAction="#handleActionButton" prefHeight="57.0" prefWidth="115.0" styleClass="btnElement" stylesheets="@../../../FrameStyle.css" text="Elemento 4" />
-                  <Button fx:id="btnElement5" layoutY="253.0" mnemonicParsing="false" onAction="#handleActionButton" prefHeight="57.0" prefWidth="115.0" styleClass="btnElement" stylesheets="@../../../FrameStyle.css" text="Elemento 5" />
-                  <Button fx:id="btnElement6" layoutY="316.0" mnemonicParsing="false" onAction="#handleActionButton" prefHeight="57.0" prefWidth="115.0" styleClass="btnElement" stylesheets="@../../../FrameStyle.css" text="Elemento 6" />
+                  <ImageView fitHeight="177.0" fitWidth="480.0" layoutX="11.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../img/MEF/Assembly/Elements/6.png" />
+                     </image>
+                  </ImageView>
                </children>
-            </AnchorPane>
-            <AnchorPane layoutX="122.0" layoutY="60.0" prefHeight="402.0" prefWidth="501.0">
+            </Pane>
+            <Pane fx:id="pnl_element5" layoutY="153.0" prefHeight="236.0" prefWidth="501.0" style="-fx-background-color: green;">
                <children>
-                  <Pane fx:id="pnl_element2" prefHeight="402.0" prefWidth="501.0" style="-fx-background-color: green;">
-                     <children>
-                        <ImageView fitHeight="182.0" fitWidth="480.0" layoutX="11.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../img/MEF/Assembly/Elements/2.png" />
-                           </image>
-                        </ImageView>
-                     </children></Pane>
-                  <Pane fx:id="pnl_element6" prefHeight="402.0" prefWidth="501.0" style="-fx-background-color: green;">
-                     <children>
-                        <ImageView fitHeight="177.0" fitWidth="480.0" layoutX="11.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../img/MEF/Assembly/Elements/6.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </Pane>
-                  <Pane fx:id="pnl_element3" prefHeight="402.0" prefWidth="507.0" style="-fx-background-color: green;">
-                     <children>
-                        <ImageView fitHeight="167.0" fitWidth="494.0" layoutX="7.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../img/MEF/Assembly/Elements/3.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </Pane>
-                  <Pane fx:id="pnl_element4" prefHeight="402.0" prefWidth="501.0" style="-fx-background-color: green;">
-                     <children>
-                        <ImageView fitHeight="176.0" fitWidth="494.0" layoutX="9.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../img/MEF/Assembly/Elements/4.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </Pane>
-                  <Pane fx:id="pnl_element5" prefHeight="402.0" prefWidth="501.0" style="-fx-background-color: green;">
-                     <children>
-                        <ImageView fitHeight="165.0" fitWidth="494.0" layoutX="7.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../img/MEF/Assembly/Elements/5.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </Pane>
-                  <Pane fx:id="pnl_element1" prefHeight="402.0" prefWidth="507.0" style="-fx-background-color: green;">
-                     <children>
-                        <ImageView fitHeight="182.0" fitWidth="480.0" layoutX="14.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../img/MEF/Assembly/Elements/1.png" />
-                           </image>
-                        </ImageView>
-                     </children></Pane>
+                  <ImageView fitHeight="165.0" fitWidth="494.0" layoutX="4.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../img/MEF/Assembly/Elements/5.png" />
+                     </image>
+                  </ImageView>
                </children>
-            </AnchorPane>
+            </Pane>
+            <Pane fx:id="pnl_element4" layoutY="153.0" prefHeight="236.0" prefWidth="501.0" style="-fx-background-color: green;">
+               <children>
+                  <ImageView fitHeight="176.0" fitWidth="494.0" layoutX="9.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../img/MEF/Assembly/Elements/4.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_element3" layoutY="153.0" prefHeight="236.0" prefWidth="507.0" style="-fx-background-color: green;">
+               <children>
+                  <ImageView fitHeight="167.0" fitWidth="494.0" layoutX="7.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../img/MEF/Assembly/Elements/3.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_element2" layoutY="153.0" prefHeight="236.0" prefWidth="501.0" style="-fx-background-color: green;">
+               <children>
+                  <ImageView fitHeight="182.0" fitWidth="480.0" layoutX="11.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../img/MEF/Assembly/Elements/2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_element1" layoutY="153.0" prefHeight="236.0" prefWidth="507.0" style="-fx-background-color: green;">
+               <children>
+                  <ImageView fitHeight="182.0" fitWidth="480.0" layoutX="14.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../img/MEF/Assembly/Elements/1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
          </children>
       </AnchorPane>
    </children>
-</StackPane>
+</AnchorPane>
