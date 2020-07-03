@@ -33,6 +33,12 @@ and open the template in the editor.
     -fx-background-insets: 0;
     -fx-text-fill: white;
 }
+.btnElement:hover {
+    -fx-background-color: linear-gradient(yellow, black);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}
 
 .btnMatrix {
     -fx-pref-width:100spx;
@@ -47,6 +53,13 @@ and open the template in the editor.
 
 .btnMatrix:pressed {
     -fx-background-color: linear-gradient(yellow, black);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}
+
+.btnMatrix:hover {
+    -fx-background-color: linear-gradient(yellowgreen, black);
     -fx-background-radius: 30;
     -fx-background-insets: 0;
     -fx-text-fill: white;

@@ -24,20 +24,6 @@
       <Separator layoutX="14.0" layoutY="59.0" prefHeight="15.0" prefWidth="603.0" />
       <AnchorPane layoutX="14.0" layoutY="74.0" prefHeight="372.0" prefWidth="603.0">
          <children>
-            <Pane fx:id="pnl_step2" prefHeight="372.0" prefWidth="603.0" styleClass="paneAssemble">
-               <children>
-                  <ImageView fitHeight="231.0" fitWidth="346.0" layoutX="129.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../img/MEF/step2.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="14.0" layoutY="14.0" prefHeight="108.0" prefWidth="574.0" text="En el paso dos transformamos las funciones de forma, en su notación matricial, y tenemos un vector fila de funciones de forma, multiplicando a un vector Columna con las incógnitas tanto para A como B." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
-                     <font>
-                        <Font size="21.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
             <Pane fx:id="pnl_step3" prefHeight="372.0" prefWidth="603.0" styleClass="paneAssemble">
                <children>
                   <ImageView fitHeight="219.0" fitWidth="421.0" layoutX="93.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
@@ -45,9 +31,9 @@
                         <Image url="@../../../img/MEF/step3.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="14.0" layoutY="14.0" prefHeight="132.0" prefWidth="574.0" text="Ahora se procede a sustituir las funciones de forma en las ecuaciones del modelo matemático. Al hacer esto, ya no son más ecuaciones, son aproximaciones. y cada aproximación se puede obtener aproximando a cero despejando y esos ceros se convertiran en Residuales si queremos estrictamente que se sustituya la aproximación por ecuación." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="132.0" prefWidth="574.0" text="Ahora se sustituye en el modelo matemático las incógnitas A y B, por sus respectivas notaciones matriciales NA y NB. Al hacer esto, las ecuaciones se convierten en aproximaciones. Por último hacemos un arreglo matemático tal que nos quede un cero en ambas expresiones. Ese cero si hablamos en términos de ecuaciones recibe el nombre de Residual." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="Times New Roman Italic" size="19.0" />
                      </font>
                   </Label>
                </children>
@@ -61,7 +47,7 @@
                   </ImageView>
                   <Label layoutX="14.0" layoutY="14.0" prefHeight="65.0" prefWidth="574.0" text="Ambos residuales tienen un mismo peso W, por lo que en la fórmula solo se sustituye los Residuales por sus ecuaciones respectivas." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="Times New Roman Italic" size="20.0" />
                      </font>
                   </Label>
                </children>
@@ -85,9 +71,9 @@
                   </AnchorPane>
                   <AnchorPane layoutX="80.0" layoutY="4.0" prefHeight="331.0" prefWidth="498.0">
                      <children>
-                        <Label prefHeight="124.0" prefWidth="520.0" text="De las matrices anteriores ocurre que tenemos funciones de forma lineales, siendo derivadas dos veces. Esta situación desemboca en una situación donde la integral da cero. La forma de esta integral se llama forma fuerte, pero por el caso se debe transformar la integral utilizando Integración por partes a su forma débil. Para tales efectos solamente las integrales D y F presentan este problema." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                        <Label prefHeight="124.0" prefWidth="520.0" text="El el paso anterior encontramos matrices que contienen funciones de forma lineales, siendo derivadas dos veces. Esta situación desemboca en una situación donde la integral da cero. La forma de esta integral se llama Forma Fuerte, pero por el caso se debe transformar la integral utilizando Integración por partes a su forma débil. " textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                            <font>
-                              <Font size="16.0" />
+                              <Font name="Times New Roman Italic" size="18.0" />
                            </font>
                         </Label>
                         <Pane fx:id="pnl_matrixF" layoutY="125.0" prefHeight="238.0" prefWidth="534.0" styleClass="paneAssemble">
@@ -111,6 +97,20 @@
                   </AnchorPane>
                </children>
             </Pane>
+            <Pane fx:id="pnl_step2" prefHeight="372.0" prefWidth="603.0" styleClass="paneAssemble">
+               <children>
+                  <ImageView fitHeight="231.0" fitWidth="346.0" layoutX="129.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/MEF/step2.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="108.0" prefWidth="574.0" text="Sabemos que N representa una matriz con las funciones de forma en términos isoparamétricos. Además que en la localización identificamos 4 nodos, en los que existirán dos incógnitas escalares A y B de temperatura. Así que las trabajaremos en forma matricial." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Times New Roman Italic" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
             <Pane fx:id="pnl_step1" prefHeight="372.0" prefWidth="603.0" styleClass="paneAssemble">
                <children>
                   <ImageView fitHeight="233.0" fitWidth="325.0" layoutX="14.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
@@ -123,9 +123,9 @@
                         <Image url="@../../../img/MEF/step1.2.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="16.0" layoutY="10.0" prefHeight="100.0" prefWidth="574.0" text="Las funciones de forma en este paso, al representar un elemento de la malla, caemos en cuenta que no existen tales funciones en el mundo real (x,y,z). Por lo que nos trasladamos al plano Isoparamétrico donde existe un tetraedro ideal, tal que las funciones de forma se cumplen para todos los elementos de la malla." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                  <Label layoutX="16.0" layoutY="10.0" prefHeight="100.0" prefWidth="574.0" text="Debido a que estamos trabajando con una malla de tetraedros irregulares, resulta imposible poder establecer funciones de forma a partir del mundo (x,y,z). Por lo que nos mudaremos a un mundo ideal, donde todos los tetraedros son regulares. El mundo Isoparamétrico (ε, η, ψ). " textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                      <font>
-                        <Font size="17.0" />
+                        <Font name="Times New Roman Italic" size="19.0" />
                      </font>
                   </Label>
                </children>

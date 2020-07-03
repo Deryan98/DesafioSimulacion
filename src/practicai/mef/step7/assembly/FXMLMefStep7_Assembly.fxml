@@ -36,7 +36,7 @@
          <children>
             <Label layoutX="20.0" prefHeight="157.0" prefWidth="461.0" text="Los siguientes son los elementos locales del cubo, que van a formar parte del ensamblaje en la matriz global. Si recuerdas se presentó anteriormente una tabla de conectividades relacionada a cada elemento. Por lo que ahora podrás apreciar como se relacionan dichas conectividades con los elementos locales." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                <font>
-                  <Font size="18.0" />
+                  <Font name="Times New Roman Italic" size="20.0" />
                </font>
             </Label>
             <Pane fx:id="pnl_element6" layoutY="153.0" prefHeight="236.0" prefWidth="501.0" style="-fx-background-color: green;">

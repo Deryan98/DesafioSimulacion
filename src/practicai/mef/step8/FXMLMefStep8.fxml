@@ -32,6 +32,30 @@
       </AnchorPane>
       <AnchorPane layoutX="12.0" layoutY="107.0" prefHeight="343.0" prefWidth="609.0">
          <children>
+            <Pane fx:id="pnl_dirichlet_neumann" prefHeight="343.0" prefWidth="609.0" styleClass="paneAssemble">
+               <children>
+                  <ImageView fitHeight="251.0" fitWidth="456.0" layoutX="14.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/MEF/Step8/Dirichlet2.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="251.0" fitWidth="86.0" layoutX="503.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/MEF/Step8/Neumann.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="16.0" prefHeight="75.0" prefWidth="577.0" text="La matriz de dirichlet es el resto de valores de las columnas en los nodos  (3,4,5,8), multiplicados por el valor 30 de dirichlet. Además se le suma la condición de Neumann a los nodos ya definidos previamente." textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Times New Roman Italic" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="474.0" layoutY="172.0" text="+" textFill="WHITE">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
             <Pane fx:id="pnl_matriz_k_global" prefHeight="343.0" prefWidth="609.0" styleClass="paneAssemble">
                <children>
                   <ImageView fitHeight="50.0" fitWidth="277.0" layoutX="9.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
@@ -54,9 +78,9 @@
                         <Image url="@../../../img/MEF/Step8/Matrix%20G.png" />
                      </image>
                   </ImageView>
-                  <Label prefHeight="81.0" prefWidth="609.0" text="La matriz K global se ve reducida por las columnas y filas que se debe retirar. Así que se dejan las respectivas numeraciones de la tabla de conectividades, para no perder la lógica del ensamblaje, y nos quedan las matrices así:" textFill="WHITE" wrapText="true">
+                  <Label layoutX="8.0" prefHeight="81.0" prefWidth="601.0" text="La matriz K global se ve reducida por las columnas y filas que se debe retirar. Así que se dejan las respectivas numeraciones de la tabla de conectividades, para no perder la lógica del ensamblaje, y nos quedan las matrices así:" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="Times New Roman Italic" size="19.0" />
                      </font>
                   </Label>
                </children>
@@ -88,33 +112,9 @@
                         <Font size="48.0" />
                      </font>
                   </Label>
-                  <Label prefHeight="81.0" prefWidth="609.0" text="La matriz de incógnitas para A se ve reducida debido a que a ella se le aplicó dirichlet, y por tanto B no ha perdido ningún nodo. Luego aplica lo mismo para la matriz f y g que componen la matriz global b." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                  <Label layoutX="8.0" prefHeight="81.0" prefWidth="601.0" text="La matriz de incógnitas para A se ve reducida debido a que a ella se le aplicó dirichlet, y por tanto B no ha perdido ningún nodo. Luego aplica lo mismo para la matriz f y g que componen la matriz global b." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                      <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
-            <Pane fx:id="pnl_dirichlet_neumann" prefHeight="343.0" prefWidth="609.0" styleClass="paneAssemble">
-               <children>
-                  <ImageView fitHeight="251.0" fitWidth="456.0" layoutX="14.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../img/MEF/Step8/Dirichlet2.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="251.0" fitWidth="86.0" layoutX="503.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../img/MEF/Step8/Neumann.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="16.0" prefHeight="60.0" prefWidth="577.0" text="La matriz de dirichlet es el resto de valores de las columnas en los nodos  (3,4,5,8), multiplicados por el valor 30 de dirichlet. Además se le suma la condición de Neumann a los nodos ya definidos previamente." textFill="WHITE" wrapText="true">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="474.0" layoutY="172.0" text="+" textFill="WHITE">
-                     <font>
-                        <Font size="36.0" />
+                        <Font name="Times New Roman Italic" size="20.0" />
                      </font>
                   </Label>
                </children>
@@ -133,7 +133,7 @@
                   </ImageView>
                   <Label alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="11.0" prefHeight="75.0" prefWidth="587.0" text="La condición de dirichlet se aplica a los nodos 3,4,5 y 8. Por lo que las filas correspondientes serán eliminadas; mas las columnas correspondientes, NO se eliminarán y se van a trabajar como valores conocidos." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="Times New Roman Italic" size="19.0" />
                      </font>
                   </Label>
                </children>

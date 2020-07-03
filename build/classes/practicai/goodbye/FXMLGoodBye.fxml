@@ -21,7 +21,7 @@
       </Label>
       <Label layoutX="43.0" layoutY="68.0" prefHeight="99.0" prefWidth="547.0" text="Luego de haber presentado el arduo trabajo que implicó este desafío, ha llegado el momento de despedirnos. Muchas Gracias por su atención!!!" textAlignment="JUSTIFY" textFill="#d9eb0f" wrapText="true">
          <font>
-            <Font name="System Bold Italic" size="24.0" />
+            <Font name="Times New Roman Bold Italic" size="24.0" />
          </font>
       </Label>
       <ImageView fitHeight="281.0" fitWidth="271.0" layoutX="199.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">

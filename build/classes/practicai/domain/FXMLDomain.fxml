@@ -18,7 +18,7 @@
       <Separator layoutX="15.0" layoutY="49.0" prefHeight="19.0" prefWidth="571.0" />
       <Label layoutX="74.0" layoutY="68.0" prefHeight="45.0" prefWidth="485.0" text="Se eligió de dominio un cubo perfecto con un valor de 10 unidades cúbicas en su volumen." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
          <font>
-            <Font size="17.0" />
+            <Font name="Times New Roman Italic" size="19.0" />
          </font></Label>
       <ImageView fitHeight="316.0" fitWidth="615.0" layoutX="152.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
          <image>

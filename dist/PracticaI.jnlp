@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="PracticaI.jar" size="12561603" download="eager" />
+    <jar href="PracticaI.jar" size="12551061" download="eager" />
   </resources>
   <jfx:javafx-desc  width="800" height="600" main-class="practicai.PracticaI"  name="PracticaI" />
   <update check="always"/>
