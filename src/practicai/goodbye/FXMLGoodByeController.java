@@ -48,5 +48,25 @@ public class FXMLGoodByeController implements Initializable {
     private void stop(ActionEvent event) {
         ((Stage)button.getScene().getWindow()).close();
     }
+
+    @FXML
+    private void loadStep8Screen(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/practicai/mef/step8/FXMLMefStep8.fxml"));
+      Scene scene = button.getScene();
+      
+      root.translateYProperty().set(-scene.getHeight());
+      
+      StackPane parentContainer = (StackPane) scene.getRoot();
+      parentContainer.getChildren().add(root);
+      
+      Timeline timeline = new Timeline();
+      KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
+      KeyFrame kf = new KeyFrame(Duration.seconds(0.5), kv);
+      timeline.getKeyFrames().add(kf);
+      timeline.setOnFinished(event1->{
+          parentContainer.getChildren().remove(container);
+      });
+      timeline.play();
+    }
     
 }

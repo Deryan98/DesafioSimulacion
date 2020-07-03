@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="container" prefHeight="511.0" prefWidth="633.0" style="-fx-background-color: green; -fx-border-color: black; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practicai.cond_contorno.FXMLCondContornoController">
+<AnchorPane id="AnchorPane" fx:id="container" prefHeight="511.0" prefWidth="633.0" style="-fx-background-color: green; -fx-border-color: black; -fx-border-width: 5;" stylesheets="@../FrameStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practicai.cond_contorno.FXMLCondContornoController">
    <children>
-      <Button fx:id="button" layoutX="261.0" layoutY="452.0" mnemonicParsing="false" onAction="#loadMeshScreen" style="-fx-background-color: black;" text="Siguiente" textFill="WHITE">
+      <Button fx:id="button" layoutX="391.0" layoutY="452.0" mnemonicParsing="false" onAction="#loadMeshScreen" style="-fx-background-color: black;" text="Siguiente" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
@@ -41,5 +41,6 @@
             <Font size="18.0" />
          </font>
       </Label>
+      <Button fx:id="anterior" layoutX="105.0" layoutY="452.0" mnemonicParsing="false" onAction="#loadDomainScreen" styleClass="btnSiguiente" text="Anterior" />
    </children>
 </AnchorPane>

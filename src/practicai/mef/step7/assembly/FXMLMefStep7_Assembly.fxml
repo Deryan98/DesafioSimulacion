@@ -9,10 +9,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane id="AnchorPane" fx:id="container" prefHeight="511.0" prefWidth="633.0" styleClass="AnchorPane" stylesheets="@../../../FrameStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practicai.mef.step7.assembly.FXMLMefStep7_AssemblyController">
    <children>
-      <Button fx:id="button" layoutX="256.0" layoutY="467.0" mnemonicParsing="false" onAction="#loadStep8Screen" styleClass="Button" stylesheets="@../../../../FrameStyle.css" text="Siguiente" textFill="WHITE">
+      <Button fx:id="button" layoutX="420.0" layoutY="467.0" mnemonicParsing="false" onAction="#loadStep8Screen" styleClass="Button" stylesheets="@../../../../FrameStyle.css" text="Siguiente" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
@@ -96,5 +95,6 @@
             </Pane>
          </children>
       </AnchorPane>
+      <Button layoutX="83.0" layoutY="467.0" mnemonicParsing="false" onAction="#loadDefComponentScreen" styleClass="btnSiguiente" text="Anterior" />
    </children>
 </AnchorPane>

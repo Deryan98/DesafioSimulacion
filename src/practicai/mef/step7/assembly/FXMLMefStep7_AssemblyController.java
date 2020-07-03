@@ -74,14 +74,14 @@ public class FXMLMefStep7_AssemblyController implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("/practicai/mef/step8/FXMLMefStep8.fxml"));
       Scene scene = button.getScene();
       
-      root.translateYProperty().set(-scene.getWidth());
+      root.translateYProperty().set(scene.getHeight());
       
       StackPane parentContainer = (StackPane) scene.getRoot();
       parentContainer.getChildren().add(root);
       
       Timeline timeline = new Timeline();
       KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
-      KeyFrame kf = new KeyFrame(Duration.seconds(0.1), kv);
+      KeyFrame kf = new KeyFrame(Duration.seconds(0.5), kv);
       timeline.getKeyFrames().add(kf);
       timeline.setOnFinished(event1->{
           parentContainer.getChildren().remove(container);
@@ -120,6 +120,26 @@ public class FXMLMefStep7_AssemblyController implements Initializable {
             pnl_element5.toFront();
         else if(event.getSource() == btnElement6)
             pnl_element6.toFront();
+    }
+
+    @FXML
+    private void loadDefComponentScreen(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/practicai/mef/step7/def_matriz/step7_8_C1/FXMLMefStep7_8_C1.fxml"));
+      Scene scene = button.getScene();
+      
+      root.translateYProperty().set(-scene.getHeight());
+      
+      StackPane parentContainer = (StackPane) scene.getRoot();
+      parentContainer.getChildren().add(root);
+      
+      Timeline timeline = new Timeline();
+      KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
+      KeyFrame kf = new KeyFrame(Duration.seconds(0.5), kv);
+      timeline.getKeyFrames().add(kf);
+      timeline.setOnFinished(event1->{
+          parentContainer.getChildren().remove(container);
+      });
+      timeline.play();
     }
     
 }

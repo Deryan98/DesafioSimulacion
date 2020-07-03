@@ -55,12 +55,12 @@ public class FXMLWelcomeController implements Initializable {
       Parent root = FXMLLoader.load(getClass().getResource("/practicai/domain/FXMLDomain.fxml"));
       Scene scene = button.getScene();
       
-      root.translateYProperty().set(scene.getHeight());
+      root.translateXProperty().set(scene.getWidth());
       parentContainer.getChildren().add(root);
       
       Timeline timeline = new Timeline();
-      KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
-      KeyFrame kf = new KeyFrame(Duration.seconds(0.1), kv);
+      KeyValue kv = new KeyValue(root.translateXProperty(), 0, Interpolator.EASE_IN);
+      KeyFrame kf = new KeyFrame(Duration.seconds(0.5), kv);
       timeline.getKeyFrames().add(kf);
       timeline.setOnFinished(event1->{
           parentContainer.getChildren().remove(anchorRoot);

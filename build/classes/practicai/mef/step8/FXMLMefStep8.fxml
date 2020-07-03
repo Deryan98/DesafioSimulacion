@@ -11,7 +11,7 @@
 
 <AnchorPane id="AnchorPane" fx:id="container" prefHeight="511.0" prefWidth="633.0" styleClass="AnchorPane" stylesheets="@../../FrameStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practicai.mef.step8.FXMLMefStep8Controller">
    <children>
-      <Button fx:id="button" layoutX="253.0" layoutY="452.0" mnemonicParsing="false" onAction="#loadGoodByeScreen" styleClass="Button" stylesheets="@../../FrameStyle.css" text="Siguiente" textFill="WHITE">
+      <Button fx:id="button" layoutX="410.0" layoutY="450.0" mnemonicParsing="false" onAction="#loadGoodByeScreen" styleClass="Button" stylesheets="@../../FrameStyle.css" text="Siguiente" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
@@ -140,5 +140,6 @@
             </Pane>
          </children>
       </AnchorPane>
+      <Button layoutX="95.0" layoutY="450.0" mnemonicParsing="false" onAction="#loadAssemblyScreen" styleClass="btnSiguiente" text="Anterior" />
    </children>
 </AnchorPane>

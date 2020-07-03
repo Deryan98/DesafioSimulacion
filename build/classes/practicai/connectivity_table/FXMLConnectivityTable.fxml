@@ -27,7 +27,7 @@
             <Font name="Times New Roman Bold Italic" size="17.0" />
          </font>
       </Label>
-      <Button fx:id="button" layoutX="253.0" layoutY="452.0" mnemonicParsing="false" onAction="#loadModelScreen" style="-fx-background-color: black;" text="Siguiente" textFill="WHITE">
+      <Button fx:id="button" layoutX="384.0" layoutY="452.0" mnemonicParsing="false" onAction="#loadModelScreen" style="-fx-background-color: black;" text="Siguiente" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font></Button>
@@ -79,5 +79,6 @@
             </Pane>
          </children>
       </AnchorPane>
+      <Button layoutX="103.0" layoutY="452.0" mnemonicParsing="false" onAction="#loadMeshScreen" styleClass="btnSiguiente" text="Anterior" />
    </children>
 </AnchorPane>

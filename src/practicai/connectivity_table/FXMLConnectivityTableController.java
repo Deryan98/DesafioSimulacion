@@ -57,14 +57,14 @@ public class FXMLConnectivityTableController implements Initializable {
       Parent root = FXMLLoader.load(getClass().getResource("/practicai/model/FXMLModel.fxml"));
       Scene scene = button.getScene();
       
-      root.translateYProperty().set(-scene.getWidth());
+      root.translateXProperty().set(scene.getWidth());
       
       StackPane parentContainer = (StackPane) scene.getRoot();
       parentContainer.getChildren().add(root);
       
       Timeline timeline = new Timeline();
-      KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
-      KeyFrame kf = new KeyFrame(Duration.seconds(0.1), kv);
+      KeyValue kv = new KeyValue(root.translateXProperty(), 0, Interpolator.EASE_IN);
+      KeyFrame kf = new KeyFrame(Duration.seconds(0.5), kv);
       timeline.getKeyFrames().add(kf);
       timeline.setOnFinished(event1->{
           parentContainer.getChildren().remove(container);
@@ -78,6 +78,26 @@ public class FXMLConnectivityTableController implements Initializable {
             pnl_elements_1to3.toFront();
         else if(event.getSource() == btn_elements4to6)
             pnl_elements4to6.toFront();
+    }
+
+    @FXML
+    private void loadMeshScreen(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/practicai/mesh/FXMLMesh.fxml"));
+      Scene scene = button.getScene();
+      
+      root.translateXProperty().set(-scene.getWidth());
+      
+      StackPane parentContainer = (StackPane) scene.getRoot();
+      parentContainer.getChildren().add(root);
+      
+      Timeline timeline = new Timeline();
+      KeyValue kv = new KeyValue(root.translateXProperty(), 0, Interpolator.EASE_IN);
+      KeyFrame kf = new KeyFrame(Duration.seconds(0.5), kv);
+      timeline.getKeyFrames().add(kf);
+      timeline.setOnFinished(event1->{
+          parentContainer.getChildren().remove(container);
+      });
+      timeline.play();
     }
     
 }

@@ -48,14 +48,34 @@ public class FXMLMeshController implements Initializable {
       Parent root = FXMLLoader.load(getClass().getResource("/practicai/connectivity_table/FXMLConnectivityTable.fxml"));
       Scene scene = button.getScene();
       
-      root.translateXProperty().set(-scene.getWidth());
+      root.translateXProperty().set(scene.getWidth());
       
       StackPane parentContainer = (StackPane) scene.getRoot();
       parentContainer.getChildren().add(root);
       
       Timeline timeline = new Timeline();
       KeyValue kv = new KeyValue(root.translateXProperty(), 0, Interpolator.EASE_OUT);
-      KeyFrame kf = new KeyFrame(Duration.seconds(0.1), kv);
+      KeyFrame kf = new KeyFrame(Duration.seconds(0.5), kv);
+      timeline.getKeyFrames().add(kf);
+      timeline.setOnFinished(event1->{
+          parentContainer.getChildren().remove(container);
+      });
+      timeline.play();
+    }
+
+    @FXML
+    private void loadCondContornoScreen(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/practicai/cond_contorno/FXMLCondContorno.fxml"));
+      Scene scene = button.getScene();
+      
+      root.translateXProperty().set(-scene.getWidth());
+      
+      StackPane parentContainer = (StackPane) scene.getRoot();
+      parentContainer.getChildren().add(root);
+      
+      Timeline timeline = new Timeline();
+      KeyValue kv = new KeyValue(root.translateXProperty(), 0, Interpolator.EASE_IN);
+      KeyFrame kf = new KeyFrame(Duration.seconds(0.5), kv);
       timeline.getKeyFrames().add(kf);
       timeline.setOnFinished(event1->{
           parentContainer.getChildren().remove(container);

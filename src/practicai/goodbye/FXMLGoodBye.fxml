@@ -9,7 +9,7 @@
 
 <AnchorPane id="AnchorPane" fx:id="container" prefHeight="511.0" prefWidth="633.0" styleClass="AnchorPane" stylesheets="@../FrameStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practicai.goodbye.FXMLGoodByeController">
    <children>
-      <Button fx:id="button" layoutX="259.0" layoutY="452.0" mnemonicParsing="false" onAction="#stop" styleClass="Button" stylesheets="@../FrameStyle.css" text="Finalizar" textFill="#e0f809">
+      <Button fx:id="button" layoutX="415.0" layoutY="452.0" mnemonicParsing="false" onAction="#stop" styleClass="Button" stylesheets="@../FrameStyle.css" text="Finalizar" textFill="#e0f809">
          <font>
             <Font size="24.0" />
          </font>
@@ -29,5 +29,6 @@
             <Image url="@../../img/goodbye.gif" />
          </image>
       </ImageView>
+      <Button layoutX="88.0" layoutY="452.0" mnemonicParsing="false" onAction="#loadStep8Screen" styleClass="btnSiguiente" text="Anterior" textFill="#e0f809" />
    </children>
 </AnchorPane>

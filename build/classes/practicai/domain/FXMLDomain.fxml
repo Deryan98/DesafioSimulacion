@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="container" prefHeight="511.0" prefWidth="633.0" style="-fx-background-color: green; -fx-border-color: black; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practicai.domain.FXMLDomainController">
+<AnchorPane id="AnchorPane" fx:id="container" prefHeight="511.0" prefWidth="633.0" style="-fx-background-color: green; -fx-border-color: black; -fx-border-width: 5;" stylesheets="@../FrameStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practicai.domain.FXMLDomainController">
    <children>
       <Label layoutX="128.0" layoutY="21.0" text="Definición de un dominio" textFill="WHITE">
          <font>
@@ -25,9 +25,10 @@
             <Image url="@../../img/Dominio.png" />
          </image>
       </ImageView>
-      <Button fx:id="button" layoutX="253.0" layoutY="452.0" mnemonicParsing="false" onAction="#loadCondContornoScreen" style="-fx-background-color: black;" text="Siguiente" textFill="WHITE">
+      <Button fx:id="button" layoutX="417.0" layoutY="452.0" mnemonicParsing="false" onAction="#loadCondContornoScreen" style="-fx-background-color: black;" text="Siguiente" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font></Button>
+      <Button fx:id="anterior" layoutX="87.0" layoutY="452.0" mnemonicParsing="false" onAction="#loadWelcomeScreen" styleClass="btnSiguiente" text="Anterior" />
    </children>
 </AnchorPane>

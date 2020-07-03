@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="container" prefHeight="511.0" prefWidth="633.0" style="-fx-background-color: green; -fx-border-color: black; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practicai.model.FXMLModelController">
+<AnchorPane id="AnchorPane" fx:id="container" prefHeight="511.0" prefWidth="633.0" style="-fx-background-color: green; -fx-border-color: black; -fx-border-width: 5;" stylesheets="@../FrameStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practicai.model.FXMLModelController">
    <children>
       <Label layoutX="149.0" layoutY="42.0" text="Modelo Matemático" textFill="WHITE">
          <font>
@@ -27,9 +27,10 @@
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="button" layoutX="242.0" layoutY="453.0" mnemonicParsing="false" onAction="#loadStep1Screen" style="-fx-background-color: black;" text="Siguiente" textFill="WHITE">
+      <Button fx:id="button" layoutX="411.0" layoutY="453.0" mnemonicParsing="false" onAction="#loadStep1Screen" style="-fx-background-color: black;" text="Siguiente" textFill="WHITE">
          <font>
             <Font name="Times New Roman" size="24.0" />
          </font></Button>
+      <Button layoutX="99.0" layoutY="453.0" mnemonicParsing="false" onAction="#loadConnTableScreen" styleClass="btnSiguiente" text="Anterior" />
    </children>
 </AnchorPane>

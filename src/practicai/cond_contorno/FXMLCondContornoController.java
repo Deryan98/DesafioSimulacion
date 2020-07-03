@@ -34,6 +34,8 @@ public class FXMLCondContornoController implements Initializable {
     private AnchorPane container;
     @FXML
     private Button button;
+    @FXML
+    private Button anterior;
 
     /**
      * Initializes the controller class.
@@ -55,7 +57,27 @@ public class FXMLCondContornoController implements Initializable {
       
       Timeline timeline = new Timeline();
       KeyValue kv = new KeyValue(root.translateXProperty(), 0, Interpolator.EASE_IN);
-      KeyFrame kf = new KeyFrame(Duration.seconds(0.1), kv);
+      KeyFrame kf = new KeyFrame(Duration.seconds(0.5), kv);
+      timeline.getKeyFrames().add(kf);
+      timeline.setOnFinished(event1->{
+          parentContainer.getChildren().remove(container);
+      });
+      timeline.play();
+    }
+
+    @FXML
+    private void loadDomainScreen(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/practicai/domain/FXMLDomain.fxml"));
+      Scene scene = button.getScene();
+      
+      root.translateXProperty().set(-scene.getWidth());
+      
+      StackPane parentContainer = (StackPane) scene.getRoot();
+      parentContainer.getChildren().add(root);
+      
+      Timeline timeline = new Timeline();
+      KeyValue kv = new KeyValue(root.translateXProperty(), 0, Interpolator.EASE_IN);
+      KeyFrame kf = new KeyFrame(Duration.seconds(0.5), kv);
       timeline.getKeyFrames().add(kf);
       timeline.setOnFinished(event1->{
           parentContainer.getChildren().remove(container);
